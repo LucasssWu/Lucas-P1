@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#36138;&#21507;&#34503;</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hud" aria-label="&#28216;&#25103;&#29366;&#24577;">
+        <div>
+          <p class="eyebrow">Snake</p>
+          <h1>&#36138;&#21507;&#34503;</h1>
+        </div>
+        <div class="stats" aria-live="polite">
+          <div class="stat">
+            <span>&#20998;&#25968;</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span>&#26368;&#39640;</span>
+            <strong id="bestScore">0</strong>
+          </div>
+          <div class="stat">
+            <span>&#36895;&#24230;</span>
+            <strong id="speedLabel">&#26222;&#36890;</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="play-area" aria-label="&#36138;&#21507;&#34503;&#28216;&#25103;&#21306;&#22495;">
+        <canvas id="gameCanvas" width="576" height="576" aria-label="&#36138;&#21507;&#34503;&#26827;&#30424;"></canvas>
+        <div class="overlay" id="overlay">
+          <div class="overlay-panel">
+            <h2 id="overlayTitle">&#20934;&#22791;&#24320;&#22987;</h2>
+            <p id="overlayText">&#25353;&#31354;&#26684;&#25110;&#28857;&#20987;&#24320;&#22987;&#12290;&#20351;&#29992;&#26041;&#21521;&#38190; / WASD &#25511;&#21046;&#31227;&#21160;&#12290;</p>
+            <button id="primaryAction" type="button">&#24320;&#22987;&#28216;&#25103;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="&#28216;&#25103;&#25511;&#21046;">
+        <div class="button-row">
+          <button id="pauseButton" type="button">&#26242;&#20572;</button>
+          <button id="restartButton" type="button">&#37325;&#24320;</button>
+          <label class="select-label" for="speedSelect">
+            <span>&#38590;&#24230;</span>
+            <select id="speedSelect">
+              <option value="slow">&#36731;&#26494;</option>
+              <option value="normal" selected>&#26222;&#36890;</option>
+              <option value="fast">&#24555;&#36895;</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mobile-pad" aria-label="&#35302;&#23631;&#26041;&#21521;&#25511;&#21046;">
+          <span></span>
+          <button type="button" data-direction="up" aria-label="&#21521;&#19978;">&uarr;</button>
+          <span></span>
+          <button type="button" data-direction="left" aria-label="&#21521;&#24038;">&larr;</button>
+          <button type="button" data-direction="down" aria-label="&#21521;&#19979;">&darr;</button>
+          <button type="button" data-direction="right" aria-label="&#21521;&#21491;">&rarr;</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
